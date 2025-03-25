@@ -56,14 +56,17 @@ class ProductCard extends StatelessWidget {
                           title: product.title!,
                           price: discountedPrice,
                           thumbnail: product.thumbnail!,
-                          brand: product.brand!,
+                          brand: product.brand ?? "Cart Special",
                           discountPercentage: product.discountPercentage,
                         ),
                         productBloc: context.read<ProductBloc>(),
                       ),
                     );
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("${product.title} added to cart"), showCloseIcon: true,),
+                      SnackBar(
+                        content: Text("${product.title} added to cart"),
+                        showCloseIcon: true,
+                      ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -89,7 +92,7 @@ class ProductCard extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            product.brand!,
+            product.brand ?? "Cart Special",
             style: const TextStyle(fontSize: 12, color: Colors.grey),
           ),
           const SizedBox(height: 4),
