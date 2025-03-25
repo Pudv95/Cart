@@ -30,7 +30,7 @@ This is a **Flutter shopping cart** system built using **Flutter Bloc for state 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/cart.git
+   git clone https://github.com/pudv95/cart.git
    cd cart
    ```
 2. Install dependencies:
